@@ -15,6 +15,6 @@ jobs:
       - name: Deploy a GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ MYSECRET_TOKEN }}
+          github_token: ${{ secrets.MYSECRET_TOKEN }}
           publish_branch: gh-pages   # 👈 asegúrate que publique a gh-pages
           publish_dir: ./            # 👈 carpeta donde está tu index.html

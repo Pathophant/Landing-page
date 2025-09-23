@@ -2,7 +2,7 @@ name: Deploy Static Site
 
 on:
   push:
-    branches: [ "master" ]   # Se ejecuta cada vez que haces push a la rama master
+    branches: [ "main" ]   # Se ejecuta cada vez que haces push a la rama master
 
 jobs:
   deploy:
@@ -15,6 +15,6 @@ jobs:
       - name: Deploy a GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.PERSONAL_TOKEN }}
+          github_token: ${{ MYSECRET_TOKEN }}
           publish_branch: gh-pages   # 👈 asegúrate que publique a gh-pages
           publish_dir: ./            # 👈 carpeta donde está tu index.html

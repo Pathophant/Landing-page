@@ -1,12 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/blair.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Bruja de Blair</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>blair movie</h1>
+<body class="bg-black text-gray-200 font-sans">
+
+  <!-- Header -->
+  <header class="bg-neutral-900 border-b-2 border-red-600 text-center py-8 shadow-lg">
+    <h1 class="text-4xl md:text-5xl font-bold tracking-widest text-red-600 uppercase">
+      La Bruja de Blair
+    </h1>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-6xl mx-auto px-4 py-12">
+
+    <!-- Info Película -->
+    <section class="flex flex-col md:flex-row items-start gap-8 mb-16">
+      
+      <!-- Póster -->
+      <div class="flex-shrink-0">
+        <img src="../img/blair.jpg" alt="Póster de La Bruja de Blair" 
+             class="w-72 rounded-lg border-4 border-red-600 shadow-[0_0_30px_rgba(220,38,38,0.6)]">
+      </div>
+
+      <!-- Detalles -->
+      <div class="flex-1">
+        <h2 class="text-2xl font-bold text-red-600 mb-4">Descripción</h2>
+        <p class="mb-6 text-justify leading-relaxed">
+          Tres estudiantes de cine se adentran en los bosques de Maryland para grabar un documental
+          sobre una leyenda local conocida como la Bruja de Blair. Lo que empieza como una investigación
+          termina convirtiéndose en una pesadilla aterradora, cuando los jóvenes desaparecen y solo se
+          encuentra su material filmado.
+        </p>
+
+        <h3 class="text-xl font-semibold text-red-600 mb-3">Ficha Técnica</h3>
+        <ul class="space-y-2">
+          <li><strong>Director:</strong> Daniel Myrick, Eduardo Sánchez</li>
+          <li><strong>Guionistas:</strong> Daniel Myrick, Eduardo Sánchez</li>
+          <li><strong>Reparto:</strong> Heather Donahue, Michael C. Williams, Joshua Leonard</li>
+          <li><strong>Género:</strong> Terror, Suspenso</li>
+          <li><strong>Año de estreno:</strong> 1999</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Tráiler -->
+    <section class="text-center">
+      <h2 class="text-2xl font-bold text-red-600 mb-6">Tráiler Oficial</h2>
+      <div class="flex justify-center">
+        <iframe width="923" height="519" 
+          src="https://www.youtube.com/embed/a_Hw4bAUj8A"
+          title="La Bruja de Blair - Tráiler Oficial"
+          class="w-full md:w-[900px] h-64 md:h-[500px] rounded-lg border-4 border-red-600 shadow-[0_0_40px_rgba(220,38,38,0.6)]"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-neutral-900 border-t-2 border-red-600 text-center py-6 mt-12">
+    <p class="text-gray-400 text-sm">Página de la película La Bruja de Blair</p>
+  </footer>
+
 </body>
 </html>

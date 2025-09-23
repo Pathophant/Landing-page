@@ -1,0 +1,189 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+
+/* Paleta de colores estilo Netflix */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #141414;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Contenedor principal */
+.landing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Imagen superior (logo/banner) */
+.image-container img {
+  max-width: 450px;  /* nunca más grande de 200px */
+  width: 100%;       /* se adapta al contenedor */
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #511483;
+}
+
+.header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #ccc;
+}
+
+/* Botón CTA */
+.cta {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #511483, #7a1fa2);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover con brillo y zoom */
+.btn:hover {
+  background: linear-gradient(135deg, #6111f5, #e01ff1);
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
+
+/* Efecto de brillo al pasar */
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.3);
+  transform: skewX(-20deg);
+  transition: 0.5s;
+}
+
+.btn:hover::after {
+  left: 100%;
+}
+
+/* Sección de películas estilo carrusel */
+.movies {
+  padding: 40px 20px;
+}
+
+.movies h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.movie-row {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.movie-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.movie-row::-webkit-scrollbar-thumb {
+  background: #e50914;
+  border-radius: 4px;
+}
+
+/* Contenedor de cada película */
+.movie {
+  position: relative;
+  width: 200px;
+  height: 300px; /* altura fija para uniformidad */
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.movie img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* recorta sin deformar */
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Efecto zoom */
+.movie:hover img {
+  transform: scale(1.1);
+}
+
+/* Overlay oculto por defecto */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  padding: 10px;
+  text-align: center;  
+}
+
+/* Mostrar overlay al pasar el mouse */
+.movie:hover .overlay {
+  opacity: 1;
+}
+
+/* Títulos y texto dentro del overlay */
+.overlay h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #fafafa; 
+}
+
+.overlay p {
+  margin: 2px 0;
+  font-size: 0.9rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #000;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  margin-top: 40px;
+}

@@ -1,12 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/megan.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Megan is Missing</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>megan page</h1>
+<body class="bg-black text-gray-200 font-sans">
+
+  <!-- Header -->
+  <header class="bg-neutral-900 border-b-2 border-blue-600 text-center py-8 shadow-lg">
+    <h1 class="text-4xl md:text-5xl font-bold tracking-widest text-pink-500 uppercase">
+      Megan is Missing
+    </h1>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-6xl mx-auto px-4 py-12">
+
+    <!-- Info -->
+    <section class="flex flex-col md:flex-row items-start gap-8 mb-16">
+      <div class="flex-shrink-0">
+        <img src="../img/megan.jpg" alt="Póster de Megan is Missing" 
+             class="w-72 rounded-lg border-4 border-blue-600 shadow-[0_0_30px_rgba(59,130,246,0.6)]">
+      </div>
+      <div class="flex-1">
+        <h2 class="text-2xl font-bold text-blue-400 mb-4">Descripción</h2>
+        <p class="mb-6 text-justify leading-relaxed">
+          Megan Stewart, una adolescente popular, desaparece tras conocer a un chico por Internet.
+          Su mejor amiga Amy registra en video todo lo ocurrido, hasta que ella misma cae en la trampa.
+          Presentada en estilo “found footage”, la película expone los oscuros peligros del mundo digital.
+        </p>
+
+        <h3 class="text-xl font-semibold text-blue-400 mb-3">Ficha Técnica</h3>
+        <ul class="space-y-2">
+          <li><strong>Director:</strong> Michael Goi</li>
+          <li><strong>Guion:</strong> Michael Goi</li>
+          <li><strong>Reparto:</strong> Amber Perkins, Rachel Quinn, Dean Waite</li>
+          <li><strong>Género:</strong> Terror, Drama, Found Footage</li>
+          <li><strong>Año de estreno:</strong> 2011</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Tráiler -->
+    <section class="text-center">
+      <h2 class="text-2xl font-bold text-pink-500 mb-6">Tráiler Oficial</h2>
+      <div class="flex justify-center">
+        <iframe width="923" height="519" 
+          src="https://www.youtube.com/embed/uukQ_6szDm8"
+          class="w-full md:w-[900px] h-64 md:h-[500px] rounded-lg border-4 border-blue-600 shadow-[0_0_40px_rgba(59,130,246,0.6)]"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-neutral-900 border-t-2 border-blue-600 text-center py-6 mt-12">
+    <p class="text-gray-400 text-sm">Página de la película Megan is Missing</p>
+  </footer>
+
 </body>
 </html>
